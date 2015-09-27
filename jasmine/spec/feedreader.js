@@ -66,7 +66,7 @@ $(function() {
          * hiding/showing of the menu element.
          */
          it('is hidden by default.', function () {
-            expect(true).toBe(true);
+            expect($('body').hasClass('menu-hidden')).toBe(true);
          });
 
          /* TODO: Write a test that ensures the menu changes
@@ -75,7 +75,10 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
           it('toggles visibility when clicked.', function () {
-            expect(true).toBe(true);
+            $('.menu-icon-link').trigger('click');
+            expect($('body').hasClass('menu-hidden')).not.toBe(true);
+            $('.menu-icon-link').trigger('click');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
           });
 
     });
