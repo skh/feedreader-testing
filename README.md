@@ -21,10 +21,10 @@ Bookmarked entries need to have the CSS class 'bookmarked' applied
 
 The following user stories need to be implemented for the tests to pass:
 
-* US 1: As a user, when I load a feed, I want to see a bookmark icon on every entry
-* US 2: As a user, when I load a feed, I don't want any entries to be bookmarked
-* US 3: As a user, when I click on the bookmark icon on a non-highlighted entry, I want the entry to be highlighted visually
-* US 4: As a user, when I click on the bookmark icon on a highlighted entyr, I want the entry to no longer be highlighted visually
+* *US 1*: As a user, when I load a feed, I want to see a bookmark icon on every entry
+* *US 2*: As a user, when I load a feed, I don't want any entries to be bookmarked
+* *US 3*: As a user, when I click on the bookmark icon on a non-highlighted entry, I want the entry to be highlighted visually
+* *US 4*: As a user, when I click on the bookmark icon on a highlighted entry, I want the entry to no longer be highlighted visually
 
 # Credits:
 
