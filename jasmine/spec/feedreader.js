@@ -91,7 +91,9 @@ $(function() {
          * the .feed container.
          */
          beforeEach(function (done) {
-            loadFeed(0, done);
+            loadFeed(0, function () {
+                done();
+            });
          });
          it('are loaded', function (done) {
             expect($('.feed').find('.entry').length).not.toBe(0);
@@ -99,11 +101,35 @@ $(function() {
          });
     });
 
-    /* TODO: Write a new test suite named "New Feed Selection" */
+    /* New Feed Selection
+     * 
+     * This test suite tests subsequent loading of feed entries
+     */
     describe('New Feed Selection', function () {
-        /* TODO: Write a test that ensures when a new feed is loaded
+        /* This test ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
          */
+         beforeEach(function (done) {
+            // remove any data from previous tests
+            $('.feed').empty();
+
+            // load first feed
+            loadFeed(0, function () {
+                urls_0 = $('.feed').find('.entry-link').attr('href');
+            });
+
+            // load second feed
+            loadFeed(1, function () {
+                urls_1 = $('.feed').find('.entry-link').attr('href');
+                done();
+            });
+         });
+
+        // compare that the urls from loading the two feeds are different 
+        it('loads different entries', function (done) {
+            expect(urls_0).not.toEqual(urls_1);
+            done();
+         });
+
     });
 }());
