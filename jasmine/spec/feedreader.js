@@ -95,9 +95,8 @@ $(function() {
                 done();
             });
          });
-         it('are loaded', function (done) {
+         it('are loaded', function () {
             expect($('.feed').find('.entry').length).not.toBe(0);
-            done();
          });
     });
 
@@ -126,10 +125,18 @@ $(function() {
          });
 
         // compare that the urls from loading the two feeds are different 
-        it('loads different entries', function (done) {
+        it('loads different entries', function () {
             expect(urls_0).not.toEqual(urls_1);
-            done();
          });
+
+    });
+
+    /* Bookmark
+     *
+     * This test suites tests bookmarking and un-bookmarking of entries. The feature
+     * is not yet implemented.
+     */
+    describe('Bookmark', function () {
 
     });
 }());
