@@ -128,6 +128,5 @@ $(function() {
         it('loads different entries', function () {
             expect(urls_0).not.toEqual(urls_1);
          });
-
     });
 }());
