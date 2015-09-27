@@ -9,10 +9,12 @@
  * to ensure they don't run until the DOM is ready.
  */
 $(function() {
-    /* This is our first test suite - a test suite just contains
-    * a related set of tests. This suite is all about the RSS
-    * feeds definitions, the allFeeds variable in our application.
-    */
+    /* RSS Feeds
+     * 
+     * This is our first test suite - a test suite just contains
+     * a related set of tests. This suite is all about the RSS
+     * feeds definitions, the allFeeds variable in our application.
+     */
     describe('RSS Feeds', function() {
         /* This is our first test - it tests to make sure that the
          * allFeeds variable has been defined and that it is not
@@ -27,9 +29,8 @@ $(function() {
         });
 
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a URL defined
-         * and that the URL is not empty.
+        /* This test loops through each feed in the allFeeds object and 
+         * ensures it has a URL defined and that the URL is not empty.
          */
          describe ('For every RSS Feed in the array, the URL attribute', function () {
             var verifyURL = function (feed) {
@@ -42,9 +43,8 @@ $(function() {
          });
 
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
+        /* This test loops through each feed in the allFeeds object and 
+         * ensures it has a name defined and that the name is not empty.
          */
         describe ('For every RSS Feed in the array, the name attribute', function () {
             var verifyName = function (feed) {
@@ -58,21 +58,19 @@ $(function() {
     });
 
 
-    /* TODO: Write a new test suite named "The menu" */
+    /* The menu
+     *
+     * This test suite test the functionality of the menu and the menu icon
+     */
     describe('The menu', function() {
-        /* TODO: Write a test that ensures the menu element is
-         * hidden by default. You'll have to analyze the HTML and
-         * the CSS to determine how we're performing the
-         * hiding/showing of the menu element.
+        /* This test ensures that the menu element is hidden by default. 
          */
          it('is hidden by default.', function () {
             expect($('body').hasClass('menu-hidden')).toBe(true);
          });
 
-         /* TODO: Write a test that ensures the menu changes
-          * visibility when the menu icon is clicked. This test
-          * should have two expectations: does the menu display when
-          * clicked and does it hide when clicked again.
+         /* This test ensures that the menu toggles visibility when the menu
+          * icon is clicked. 
           */
           it('toggles visibility when clicked.', function () {
             $('.menu-icon-link').trigger('click');
