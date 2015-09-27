@@ -135,8 +135,20 @@ $(function() {
      *
      * This test suites tests bookmarking and un-bookmarking of entries. The feature
      * is not yet implemented.
+     * 
+     * User stories for this new feature can be found in the project README.md file
      */
     describe('Bookmark', function () {
+        /* All tests need a loaded feed */
+        beforeEach (function (done) {
+            // remove any data from previous test
+            $('.feed').empty();
+
+            // load feed
+            loadFeed(0, function (done) {
+                done();
+            });
+        });
 
     });
 }());
