@@ -48,9 +48,9 @@ $(function() {
         /* This tests US 3 and 4: click on the 'bookmark' icon toggles bookmarked state */
         it('icon toggles bookmark state on click', function () {
             $(entries[0]).find('bookmark-icon').trigger('click');
-            expect($(entries[0]).hasClass('bookmarked')toBe('true'));
+            expect($(entries[0]).hasClass('bookmarked')).toBe('true');
             $(entries[0]).find('bookmark-icon').trigger('click');
-            expect($(entries[0]).hasClass('bookmarked')toBe('true'));
+            expect($(entries[0]).hasClass('bookmarked')).not.toBe('true');
         });
     });
 
